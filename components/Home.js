@@ -38,7 +38,7 @@ function Home() {
   useEffect(() => {
     fetch('https://mymovies-backend-bay.vercel.app/movies')
     .then(response => response.json())
-    .then(data => setMovieData(data))
+    .then(data => setMovieData(data.movies))
   }, [])
 
   const movies = moviesData.map((data, i) => {
